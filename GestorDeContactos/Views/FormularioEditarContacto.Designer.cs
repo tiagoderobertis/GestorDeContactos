@@ -28,70 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
+            BtnAceptar = new Button();
+            TxtNombre = new TextBox();
+            TxtApellido = new TextBox();
+            TxtNumero = new TextBox();
+            TxtFijo = new TextBox();
+            CmbTipoContacto = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            LblError = new Label();
             SuspendLayout();
             // 
-            // button1
+            // BtnAceptar
             // 
-            button1.Location = new Point(94, 433);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 24);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            BtnAceptar.Location = new Point(89, 405);
+            BtnAceptar.Name = "BtnAceptar";
+            BtnAceptar.Size = new Size(83, 24);
+            BtnAceptar.TabIndex = 0;
+            BtnAceptar.Text = "Guardar";
+            BtnAceptar.UseVisualStyleBackColor = true;
+            BtnAceptar.Click += BtnAceptar_Click;
             // 
-            // textBox1
+            // TxtNombre
             // 
-            textBox1.Location = new Point(10, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(121, 23);
-            textBox1.TabIndex = 1;
+            TxtNombre.Location = new Point(10, 38);
+            TxtNombre.Name = "TxtNombre";
+            TxtNombre.Size = new Size(121, 23);
+            TxtNombre.TabIndex = 1;
             // 
-            // textBox2
+            // TxtApellido
             // 
-            textBox2.Location = new Point(10, 139);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(121, 23);
-            textBox2.TabIndex = 1;
+            TxtApellido.Location = new Point(10, 92);
+            TxtApellido.Name = "TxtApellido";
+            TxtApellido.Size = new Size(121, 23);
+            TxtApellido.TabIndex = 1;
             // 
-            // textBox3
+            // TxtNumero
             // 
-            textBox3.Location = new Point(10, 210);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(121, 23);
-            textBox3.TabIndex = 1;
+            TxtNumero.Location = new Point(12, 151);
+            TxtNumero.Name = "TxtNumero";
+            TxtNumero.Size = new Size(121, 23);
+            TxtNumero.TabIndex = 1;
             // 
-            // textBox4
+            // TxtFijo
             // 
-            textBox4.Location = new Point(11, 270);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(120, 23);
-            textBox4.TabIndex = 1;
+            TxtFijo.Location = new Point(11, 212);
+            TxtFijo.Name = "TxtFijo";
+            TxtFijo.Size = new Size(120, 23);
+            TxtFijo.TabIndex = 1;
             // 
-            // comboBox1
+            // CmbTipoContacto
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 339);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 2;
+            CmbTipoContacto.FormattingEnabled = true;
+            CmbTipoContacto.Location = new Point(10, 282);
+            CmbTipoContacto.Name = "CmbTipoContacto";
+            CmbTipoContacto.Size = new Size(121, 23);
+            CmbTipoContacto.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Nuevo Nombre";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 74);
+            label2.Name = "label2";
+            label2.Size = new Size(89, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Nuevo Apellido";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(11, 133);
+            label3.Name = "label3";
+            label3.Size = new Size(89, 15);
+            label3.TabIndex = 3;
+            label3.Text = "Nuevo Numero";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(10, 194);
+            label4.Name = "label4";
+            label4.Size = new Size(64, 15);
+            label4.TabIndex = 3;
+            label4.Text = "Nuevo Fijo";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 252);
+            label5.Name = "label5";
+            label5.Size = new Size(98, 15);
+            label5.TabIndex = 3;
+            label5.Text = "Tipo de Contacto";
+            // 
+            // LblError
+            // 
+            LblError.AutoSize = true;
+            LblError.BackColor = Color.White;
+            LblError.ForeColor = Color.Red;
+            LblError.Location = new Point(10, 494);
+            LblError.Name = "LblError";
+            LblError.Size = new Size(43, 15);
+            LblError.TabIndex = 3;
+            LblError.Text = "Errores";
             // 
             // FormularioEditarContacto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(277, 518);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(LblError);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(CmbTipoContacto);
+            Controls.Add(TxtFijo);
+            Controls.Add(TxtNumero);
+            Controls.Add(TxtApellido);
+            Controls.Add(TxtNombre);
+            Controls.Add(BtnAceptar);
             Name = "FormularioEditarContacto";
             Text = "FormularioEditarContacto";
             ResumeLayout(false);
@@ -100,11 +169,17 @@
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
+        private Button BtnAceptar;
+        private TextBox TxtNombre;
+        private TextBox TxtApellido;
+        private TextBox TxtNumero;
+        private TextBox TxtFijo;
+        private ComboBox CmbTipoContacto;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label LblError;
     }
 }

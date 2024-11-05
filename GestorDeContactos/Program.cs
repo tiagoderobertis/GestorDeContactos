@@ -17,7 +17,7 @@ namespace GestorDeContactos
             using (var context = new ApplicationDBContext())
             {
                 context.Database.Migrate();
-                Application.Run(new Form1(context));
+                Application.Run(new FormMain(context));
             }
         }
     }
