@@ -3,26 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\views\\formularioeditarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\views\\formularioeditarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\views\\formularioagregarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\views\\formularioagregarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\views\\formularioagregarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\views\\formularioagregarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\views\\formularioeditarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\views\\formularioeditarcontacto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|c:\\users\\tiago\\source\\repos\\myprojects\\gestordecontactos\\gestordecontactos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{69BED6A8-B6DB-4CAA-9765-8C655E59772E}|GestorDeContactos\\GestorDeContactos.csproj|solutionrelative:gestordecontactos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -34,78 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormularioAgregarContacto.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "RelativeDocumentMoniker": "GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "ToolTip": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "RelativeToolTip": "GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBMAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T01:59:12.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormularioAgregarContacto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "RelativeDocumentMoniker": "GestorDeContactos\\Views\\FormularioAgregarContacto.cs",
-              "ToolTip": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioAgregarContacto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestorDeContactos\\Views\\FormularioAgregarContacto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T01:59:11.354Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormularioEditarContacto.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "RelativeDocumentMoniker": "GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "ToolTip": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "RelativeToolTip": "GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T01:59:00.065Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormMain.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\FormMain.cs",
-              "RelativeDocumentMoniker": "GestorDeContactos\\FormMain.cs",
-              "ToolTip": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\FormMain.cs",
-              "RelativeToolTip": "GestorDeContactos\\FormMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAADYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T01:58:12.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormularioEditarContacto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "RelativeDocumentMoniker": "GestorDeContactos\\Views\\FormularioEditarContacto.cs",
-              "ToolTip": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\Views\\FormularioEditarContacto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestorDeContactos\\Views\\FormularioEditarContacto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T01:54:38.48Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "FormMain.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\MyProjects\\GestorDeContactos\\GestorDeContactos\\FormMain.cs",
               "RelativeDocumentMoniker": "GestorDeContactos\\FormMain.cs",
@@ -113,7 +26,12 @@
               "RelativeToolTip": "GestorDeContactos\\FormMain.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T01:43:00.405Z",
+              "IsPinned": true,
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         },

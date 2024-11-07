@@ -57,6 +57,7 @@ namespace GestorDeContactos.Data.Repository
             if (verificarExistencia != null)
             {
                 _dbContext.Contactos.Remove(verificarExistencia);
+                _dbContext.SaveChanges();
             }
         }
 

@@ -35,30 +35,35 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            contactoBindingSource = new BindingSource(components);
             btnAgregarContacto = new PictureBox();
             btnEliminarContacto = new PictureBox();
             btnEditarContacto = new PictureBox();
             DgvContactos = new DataGridView();
-            idContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nombreContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            apellidoContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            numeroTelefonoContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            numeroFijoContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tipoContactoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            contactoBindingSource1 = new BindingSource(components);
+            panel1 = new Panel();
+            panel2 = new Panel();
+            LblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)contactoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnAgregarContacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnEliminarContacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnEditarContacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DgvContactos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)contactoBindingSource1).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(75, 30);
+            label1.Location = new Point(75, 9);
             label1.Name = "label1";
             label1.Size = new Size(190, 28);
             label1.TabIndex = 0;
@@ -67,21 +72,17 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 30);
+            pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // contactoBindingSource
-            // 
-            contactoBindingSource.DataSource = typeof(Data.Models.Contacto);
-            // 
             // btnAgregarContacto
             // 
             btnAgregarContacto.Image = (Image)resources.GetObject("btnAgregarContacto.Image");
-            btnAgregarContacto.Location = new Point(12, 456);
+            btnAgregarContacto.Location = new Point(12, 467);
             btnAgregarContacto.Name = "btnAgregarContacto";
             btnAgregarContacto.Size = new Size(50, 50);
             btnAgregarContacto.SizeMode = PictureBoxSizeMode.Zoom;
@@ -92,17 +93,18 @@
             // btnEliminarContacto
             // 
             btnEliminarContacto.Image = (Image)resources.GetObject("btnEliminarContacto.Image");
-            btnEliminarContacto.Location = new Point(228, 456);
+            btnEliminarContacto.Location = new Point(228, 482);
             btnEliminarContacto.Name = "btnEliminarContacto";
             btnEliminarContacto.Size = new Size(37, 35);
             btnEliminarContacto.SizeMode = PictureBoxSizeMode.Zoom;
             btnEliminarContacto.TabIndex = 3;
             btnEliminarContacto.TabStop = false;
+            btnEliminarContacto.Click += btnEliminarContacto_Click;
             // 
             // btnEditarContacto
             // 
             btnEditarContacto.Image = (Image)resources.GetObject("btnEditarContacto.Image");
-            btnEditarContacto.Location = new Point(68, 456);
+            btnEditarContacto.Location = new Point(68, 467);
             btnEditarContacto.Name = "btnEditarContacto";
             btnEditarContacto.Size = new Size(50, 50);
             btnEditarContacto.SizeMode = PictureBoxSizeMode.Zoom;
@@ -128,8 +130,8 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             DgvContactos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DgvContactos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgvContactos.Columns.AddRange(new DataGridViewColumn[] { idContactoDataGridViewTextBoxColumn, nombreContactoDataGridViewTextBoxColumn, apellidoContactoDataGridViewTextBoxColumn, numeroTelefonoContactoDataGridViewTextBoxColumn, numeroFijoContactoDataGridViewTextBoxColumn, tipoContactoDataGridViewTextBoxColumn });
-            DgvContactos.DataSource = contactoBindingSource;
+            DgvContactos.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            DgvContactos.DataSource = contactoBindingSource1;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
@@ -143,82 +145,120 @@
             DgvContactos.Name = "DgvContactos";
             DgvContactos.ReadOnly = true;
             DgvContactos.RowHeadersVisible = false;
-            DgvContactos.Size = new Size(253, 372);
+            DgvContactos.Size = new Size(253, 383);
             DgvContactos.TabIndex = 4;
+            DgvContactos.CellClick += DgvContactos_CellClick;
             // 
-            // idContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            idContactoDataGridViewTextBoxColumn.DataPropertyName = "IdContacto";
-            idContactoDataGridViewTextBoxColumn.HeaderText = "IdContacto";
-            idContactoDataGridViewTextBoxColumn.Name = "idContactoDataGridViewTextBoxColumn";
-            idContactoDataGridViewTextBoxColumn.ReadOnly = true;
-            idContactoDataGridViewTextBoxColumn.Visible = false;
+            dataGridViewTextBoxColumn1.DataPropertyName = "IdContacto";
+            dataGridViewTextBoxColumn1.HeaderText = "IdContacto";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // nombreContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            nombreContactoDataGridViewTextBoxColumn.DataPropertyName = "NombreContacto";
-            nombreContactoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            nombreContactoDataGridViewTextBoxColumn.Name = "nombreContactoDataGridViewTextBoxColumn";
-            nombreContactoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn2.DataPropertyName = "NombreContacto";
+            dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // apellidoContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            apellidoContactoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoContacto";
-            apellidoContactoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            apellidoContactoDataGridViewTextBoxColumn.Name = "apellidoContactoDataGridViewTextBoxColumn";
-            apellidoContactoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn3.DataPropertyName = "ApellidoContacto";
+            dataGridViewTextBoxColumn3.HeaderText = "Apellido";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // numeroTelefonoContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            numeroTelefonoContactoDataGridViewTextBoxColumn.DataPropertyName = "NumeroTelefonoContacto";
-            numeroTelefonoContactoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            numeroTelefonoContactoDataGridViewTextBoxColumn.Name = "numeroTelefonoContactoDataGridViewTextBoxColumn";
-            numeroTelefonoContactoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn4.DataPropertyName = "NumeroTelefonoContacto";
+            dataGridViewTextBoxColumn4.HeaderText = "Telefono";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // numeroFijoContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            numeroFijoContactoDataGridViewTextBoxColumn.DataPropertyName = "NumeroFijoContacto";
-            numeroFijoContactoDataGridViewTextBoxColumn.HeaderText = "Fijo";
-            numeroFijoContactoDataGridViewTextBoxColumn.Name = "numeroFijoContactoDataGridViewTextBoxColumn";
-            numeroFijoContactoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn5.DataPropertyName = "NumeroFijoContacto";
+            dataGridViewTextBoxColumn5.HeaderText = "Fijo";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // tipoContactoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            tipoContactoDataGridViewTextBoxColumn.DataPropertyName = "TipoContacto";
-            tipoContactoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            tipoContactoDataGridViewTextBoxColumn.Name = "tipoContactoDataGridViewTextBoxColumn";
-            tipoContactoDataGridViewTextBoxColumn.ReadOnly = true;
+            dataGridViewTextBoxColumn6.DataPropertyName = "TipoContacto";
+            dataGridViewTextBoxColumn6.HeaderText = "Tipo de Contacto";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // contactoBindingSource1
+            // 
+            contactoBindingSource1.DataSource = typeof(Data.Models.Contacto);
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(224, 224, 224);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(277, 49);
+            panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.Controls.Add(LblError);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 533);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(277, 25);
+            panel2.TabIndex = 6;
+            // 
+            // LblError
+            // 
+            LblError.AutoSize = true;
+            LblError.ForeColor = Color.Red;
+            LblError.Location = new Point(3, 1);
+            LblError.Name = "LblError";
+            LblError.Size = new Size(43, 15);
+            LblError.TabIndex = 0;
+            LblError.Text = "Errores";
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(277, 518);
+            ClientSize = new Size(277, 558);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(DgvContactos);
             Controls.Add(btnEditarContacto);
             Controls.Add(btnEliminarContacto);
             Controls.Add(btnAgregarContacto);
-            Controls.Add(pictureBox1);
-            Controls.Add(label1);
             Name = "FormMain";
             Text = "Gestor de Contactos";
             Activated += Form1_Activated;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)contactoBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnAgregarContacto).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnEliminarContacto).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnEditarContacto).EndInit();
             ((System.ComponentModel.ISupportInitialize)DgvContactos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)contactoBindingSource1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
         private PictureBox pictureBox1;
-        private BindingSource contactoBindingSource;
         private PictureBox btnAgregarContacto;
         private PictureBox btnEliminarContacto;
         private PictureBox btnEditarContacto;
@@ -229,5 +269,15 @@
         private DataGridViewTextBoxColumn numeroTelefonoContactoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn numeroFijoContactoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tipoContactoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private BindingSource contactoBindingSource1;
+        private Panel panel1;
+        private Panel panel2;
+        private Label LblError;
     }
 }
