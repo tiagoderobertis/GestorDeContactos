@@ -59,5 +59,15 @@ namespace GestorDeContactos.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

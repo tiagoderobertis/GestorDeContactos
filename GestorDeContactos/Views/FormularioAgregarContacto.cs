@@ -23,25 +23,49 @@ namespace GestorDeContactos.Views
 
         private void btnAgregarContacto_Click(object sender, EventArgs e)
         {
-            int numeroContacto = 0;
-            if (TxtNumero.Text != string.Empty) // Si el txt no esta vacio
+            int numeroContacto = 0; // es necesario inicializar la variable
+            if (TxtNumero.Text != string.Empty)
             {
-                int.TryParse(TxtNumero.Text, out numeroContacto); // Intenta pasar de string a int
+                try
+                {
+                    numeroContacto = int.Parse(TxtNumero.Text);
+                }
+                catch
+                {
+                        LblError.Text = "Ingresa un numero de telefono valido";
+                }
             }
 
             int fijoContacto = 0;
-            if (TxtFijo.Text != string.Empty) // Si el txt no esta vacio
+            if (TxtFijo.Text != string.Empty)
             {
-                int.TryParse(TxtFijo.Text, out fijoContacto); // Intenta pasar de string a int
+                try
+                {
+                    fijoContacto = int.Parse(TxtFijo.Text);
+                }
+                catch
+                {
+                    LblError.Text = "Ingresa un telefono fijo valido";
+                }
             }
 
-            if (string.IsNullOrEmpty(TxtNombre.Text) || string.IsNullOrEmpty(CmbTipoContacto.Text))
+            if (string.IsNullOrEmpty(TxtNombre.Text) || string.IsNullOrEmpty(TxtNumero.Text))
             {
-                LblError.Text = "Rellena los campos faltantes: Nombre o Tipo de Contacto"; // si los txt estan vacios error
-            } else { 
+                LblError.Text = "Rellena los campos faltantes"; // si los txt estan vacios error
+            } else if(string.IsNullOrWhiteSpace(TxtFijo.Text))
+            {
+                _contactoRepository.Agregar(TxtNombre.Text, TxtApellido.Text, numeroContacto, null, CmbTipoContacto.Text); // se le pasa null al numero fijo al metodo editar
+            }
+            else
+            {
                 _contactoRepository.Agregar(TxtNombre.Text, TxtApellido.Text, numeroContacto, fijoContacto, CmbTipoContacto.Text); // si todo esta bien metodo add
             }
 
+        }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

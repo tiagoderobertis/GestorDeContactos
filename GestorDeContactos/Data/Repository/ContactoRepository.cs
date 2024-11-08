@@ -44,7 +44,7 @@ namespace GestorDeContactos.Data.Repository
                 verificarExistencia.NombreContacto = nombre;
                 verificarExistencia.ApellidoContacto = apellido;
                 verificarExistencia.NumeroTelefonoContacto = numero;
-                verificarExistencia.NumeroFijoContacto= numeroFijo;
+                verificarExistencia.NumeroFijoContacto = numeroFijo;
                 verificarExistencia.TipoContacto = tipoContacto;
 
                 _dbContext.SaveChanges();
@@ -61,5 +61,39 @@ namespace GestorDeContactos.Data.Repository
             }
         }
 
+        public string SeleccionarColumnaPorId(string Columna, int id)
+        {
+
+            switch (Columna)
+            {
+                case "NombreContacto":
+                    return _dbContext.Contactos
+                                .Where(x => x.IdContacto == id)
+                                .Select(x => x.NombreContacto).FirstOrDefault();
+                case "ApellidoContacto":
+                    return _dbContext.Contactos
+                                .Where(x => x.IdContacto == id)
+                                .Select(x => x.ApellidoContacto).FirstOrDefault();
+                    
+                case "NumeroTelefonoContacto":
+                    return _dbContext.Contactos
+                                .Where(x => x.IdContacto == id)
+                                .Select(x => x.NumeroTelefonoContacto).FirstOrDefault().ToString();
+                    
+                case "NumeroFijoContacto":
+                    return _dbContext.Contactos
+                                .Where(x => x.IdContacto == id)
+                                .Select(x => x.NumeroFijoContacto).FirstOrDefault().ToString();
+                    
+                case "TipoContacto":
+                    return _dbContext.Contactos
+                                .Where(x => x.IdContacto == id)
+                                .Select(x => x.TipoContacto).FirstOrDefault();
+                    
+                default: return ""; 
+                    
+            }
+
+        }
     }
 }

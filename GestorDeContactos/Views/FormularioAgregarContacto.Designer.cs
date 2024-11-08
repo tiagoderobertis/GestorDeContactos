@@ -40,6 +40,9 @@
             label4 = new Label();
             label5 = new Label();
             LblError = new Label();
+            panel3 = new Panel();
+            BtnVolver = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)BtnVolver).BeginInit();
             SuspendLayout();
             // 
             // CmbTipoContacto
@@ -47,37 +50,41 @@
             CmbTipoContacto.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbTipoContacto.FormattingEnabled = true;
             CmbTipoContacto.Items.AddRange(new object[] { "Personal", "Empresa" });
-            CmbTipoContacto.Location = new Point(11, 279);
+            CmbTipoContacto.Location = new Point(140, 297);
             CmbTipoContacto.Name = "CmbTipoContacto";
-            CmbTipoContacto.Size = new Size(121, 23);
+            CmbTipoContacto.Size = new Size(120, 23);
             CmbTipoContacto.TabIndex = 8;
             // 
             // TxtFijo
             // 
-            TxtFijo.Location = new Point(12, 222);
+            TxtFijo.BorderStyle = BorderStyle.FixedSingle;
+            TxtFijo.Location = new Point(140, 265);
             TxtFijo.Name = "TxtFijo";
             TxtFijo.Size = new Size(120, 23);
             TxtFijo.TabIndex = 4;
             // 
             // TxtNumero
             // 
-            TxtNumero.Location = new Point(12, 167);
+            TxtNumero.BorderStyle = BorderStyle.FixedSingle;
+            TxtNumero.Location = new Point(139, 236);
             TxtNumero.Name = "TxtNumero";
             TxtNumero.Size = new Size(121, 23);
             TxtNumero.TabIndex = 5;
             // 
             // TxtApellido
             // 
-            TxtApellido.Location = new Point(12, 102);
+            TxtApellido.BorderStyle = BorderStyle.FixedSingle;
+            TxtApellido.Location = new Point(139, 207);
             TxtApellido.Name = "TxtApellido";
             TxtApellido.Size = new Size(121, 23);
             TxtApellido.TabIndex = 6;
             // 
             // TxtNombre
             // 
-            TxtNombre.Location = new Point(11, 48);
+            TxtNombre.BorderStyle = BorderStyle.FixedSingle;
+            TxtNombre.Location = new Point(139, 179);
             TxtNombre.Name = "TxtNombre";
-            TxtNombre.Size = new Size(121, 23);
+            TxtNombre.Size = new Size(120, 23);
             TxtNombre.TabIndex = 7;
             // 
             // btnAgregarContacto
@@ -93,7 +100,7 @@
             // Nombre
             // 
             Nombre.AutoSize = true;
-            Nombre.Location = new Point(11, 30);
+            Nombre.Location = new Point(26, 181);
             Nombre.Name = "Nombre";
             Nombre.Size = new Size(51, 15);
             Nombre.TabIndex = 9;
@@ -102,7 +109,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 84);
+            label2.Location = new Point(26, 210);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 9;
@@ -111,7 +118,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 149);
+            label3.Location = new Point(26, 239);
             label3.Name = "label3";
             label3.Size = new Size(51, 15);
             label3.TabIndex = 9;
@@ -120,7 +127,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 204);
+            label4.Location = new Point(26, 268);
             label4.Name = "label4";
             label4.Size = new Size(26, 15);
             label4.TabIndex = 9;
@@ -129,7 +136,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 261);
+            label5.Location = new Point(26, 300);
             label5.Name = "label5";
             label5.Size = new Size(96, 15);
             label5.TabIndex = 9;
@@ -145,11 +152,34 @@
             LblError.TabIndex = 9;
             LblError.Text = "Errores";
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Gray;
+            panel3.Location = new Point(12, 163);
+            panel3.Name = "panel3";
+            panel3.Padding = new Padding(1);
+            panel3.Size = new Size(253, 10);
+            panel3.TabIndex = 10;
+            // 
+            // BtnVolver
+            // 
+            BtnVolver.Image = Properties.Resources.pngwing_com;
+            BtnVolver.Location = new Point(12, 12);
+            BtnVolver.Name = "BtnVolver";
+            BtnVolver.Size = new Size(40, 40);
+            BtnVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            BtnVolver.TabIndex = 11;
+            BtnVolver.TabStop = false;
+            BtnVolver.Click += BtnVolver_Click;
+            // 
             // FormularioAgregarContacto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(277, 518);
+            Controls.Add(BtnVolver);
+            Controls.Add(TxtNombre);
+            Controls.Add(panel3);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -160,10 +190,10 @@
             Controls.Add(TxtFijo);
             Controls.Add(TxtNumero);
             Controls.Add(TxtApellido);
-            Controls.Add(TxtNombre);
             Controls.Add(btnAgregarContacto);
             Name = "FormularioAgregarContacto";
             Text = "FormularioAgregarContacto";
+            ((System.ComponentModel.ISupportInitialize)BtnVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +212,7 @@
         private Label label4;
         private Label label5;
         private Label LblError;
+        private Panel panel3;
+        private PictureBox BtnVolver;
     }
 }

@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             btnAgregarContacto = new PictureBox();
@@ -49,6 +49,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             LblError = new Label();
+            PnlContainer = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnAgregarContacto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnEliminarContacto).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)contactoBindingSource1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            PnlContainer.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@
             // btnAgregarContacto
             // 
             btnAgregarContacto.Image = (Image)resources.GetObject("btnAgregarContacto.Image");
-            btnAgregarContacto.Location = new Point(12, 467);
+            btnAgregarContacto.Location = new Point(57, 428);
             btnAgregarContacto.Name = "btnAgregarContacto";
             btnAgregarContacto.Size = new Size(50, 50);
             btnAgregarContacto.SizeMode = PictureBoxSizeMode.Zoom;
@@ -93,9 +95,9 @@
             // btnEliminarContacto
             // 
             btnEliminarContacto.Image = (Image)resources.GetObject("btnEliminarContacto.Image");
-            btnEliminarContacto.Location = new Point(228, 482);
+            btnEliminarContacto.Location = new Point(169, 428);
             btnEliminarContacto.Name = "btnEliminarContacto";
-            btnEliminarContacto.Size = new Size(37, 35);
+            btnEliminarContacto.Size = new Size(44, 50);
             btnEliminarContacto.SizeMode = PictureBoxSizeMode.Zoom;
             btnEliminarContacto.TabIndex = 3;
             btnEliminarContacto.TabStop = false;
@@ -104,7 +106,7 @@
             // btnEditarContacto
             // 
             btnEditarContacto.Image = (Image)resources.GetObject("btnEditarContacto.Image");
-            btnEditarContacto.Location = new Point(68, 467);
+            btnEditarContacto.Location = new Point(113, 428);
             btnEditarContacto.Name = "btnEditarContacto";
             btnEditarContacto.Size = new Size(50, 50);
             btnEditarContacto.SizeMode = PictureBoxSizeMode.Zoom;
@@ -116,36 +118,36 @@
             // 
             DgvContactos.AllowUserToAddRows = false;
             DgvContactos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            DgvContactos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.LightGray;
+            DgvContactos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             DgvContactos.AutoGenerateColumns = false;
             DgvContactos.BorderStyle = BorderStyle.None;
             DgvContactos.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.LightSlateGray;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            DgvContactos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.LightSlateGray;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            DgvContactos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             DgvContactos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgvContactos.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
             DgvContactos.DataSource = contactoBindingSource1;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            DgvContactos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            DgvContactos.DefaultCellStyle = dataGridViewCellStyle6;
             DgvContactos.EnableHeadersVisualStyles = false;
-            DgvContactos.Location = new Point(12, 78);
+            DgvContactos.Location = new Point(12, 6);
             DgvContactos.Name = "DgvContactos";
             DgvContactos.ReadOnly = true;
             DgvContactos.RowHeadersVisible = false;
-            DgvContactos.Size = new Size(253, 383);
+            DgvContactos.Size = new Size(253, 416);
             DgvContactos.TabIndex = 4;
             DgvContactos.CellClick += DgvContactos_CellClick;
             // 
@@ -211,8 +213,7 @@
             // 
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(LblError);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 533);
+            panel2.Location = new Point(0, 484);
             panel2.Name = "panel2";
             panel2.Size = new Size(277, 25);
             panel2.TabIndex = 6;
@@ -227,17 +228,26 @@
             LblError.TabIndex = 0;
             LblError.Text = "Errores";
             // 
+            // PnlContainer
+            // 
+            PnlContainer.Controls.Add(DgvContactos);
+            PnlContainer.Controls.Add(panel2);
+            PnlContainer.Controls.Add(btnAgregarContacto);
+            PnlContainer.Controls.Add(btnEditarContacto);
+            PnlContainer.Controls.Add(btnEliminarContacto);
+            PnlContainer.Dock = DockStyle.Fill;
+            PnlContainer.Location = new Point(0, 49);
+            PnlContainer.Name = "PnlContainer";
+            PnlContainer.Size = new Size(277, 509);
+            PnlContainer.TabIndex = 7;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(277, 558);
-            Controls.Add(panel2);
+            Controls.Add(PnlContainer);
             Controls.Add(panel1);
-            Controls.Add(DgvContactos);
-            Controls.Add(btnEditarContacto);
-            Controls.Add(btnEliminarContacto);
-            Controls.Add(btnAgregarContacto);
             Name = "FormMain";
             Text = "Gestor de Contactos";
             Activated += Form1_Activated;
@@ -252,6 +262,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            PnlContainer.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -279,5 +290,6 @@
         private Panel panel1;
         private Panel panel2;
         private Label LblError;
+        private Panel PnlContainer;
     }
 }
