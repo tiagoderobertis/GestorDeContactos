@@ -2,6 +2,7 @@ using GestorDeContactos.Views;
 using GestorDeContactos.Data;
 using GestorDeContactos.Data.Repository;
 using Microsoft.VisualBasic;
+using GestorDeContactos.Data.Models;
 
 namespace GestorDeContactos
 {
@@ -87,11 +88,13 @@ namespace GestorDeContactos
 
         private void DgvContactos_CellClick(object sender, DataGridViewCellEventArgs e) // maneja el evento click en una celda
         {
-            try { 
-            valorCelda = DgvContactos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(); // obtiene el valor de la celda
-            valorPrimerColumna = Convert.ToInt32(DgvContactos.Rows[e.RowIndex].Cells[0].Value); // obtiene el valor de la primera columna (id)
-            cellClicked = true; // hay una celda clickeada
-            } catch
+            try
+            {
+                valorCelda = DgvContactos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(); // obtiene el valor de la celda
+                valorPrimerColumna = Convert.ToInt32(DgvContactos.Rows[e.RowIndex].Cells[0].Value); // obtiene el valor de la primera columna (id)
+                cellClicked = true; // hay una celda clickeada
+            }
+            catch
             {
                 LblError.Text = "Haga click en la celda correcta";
             }
@@ -101,7 +104,7 @@ namespace GestorDeContactos
         {
             if (cellClicked)
             {
-                
+
                 DialogResult result = MessageBox.Show(
                     "Esta seguro que desea eliminar este contacto?", // texto
                     "Confirmar eliminacion", // titulo del msgbox
@@ -112,7 +115,7 @@ namespace GestorDeContactos
                 if (result == DialogResult.Yes)
                 {
                     _contactoRepository.Eliminar(valorPrimerColumna); // metodo eliminar del repo
-                    
+
                     DgvContactos.DataSource = null;
                     DgvContactos.DataSource = _contactoRepository.ObtenerTodos();
                     DgvContactos.Refresh(); // reset dgv
@@ -124,5 +127,40 @@ namespace GestorDeContactos
         #endregion
 
 
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+        private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void panelBarraTitulo_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void BtnBuscarPorNombre_Click(object sender, EventArgs e)
+        {
+            List<Contacto> listaPorNombres = _contactoRepository.ObtenerPorNombre(TxtBuscarPorNombre.Text);
+            DgvContactos.DataSource = listaPorNombres;
+        }
     }
 }

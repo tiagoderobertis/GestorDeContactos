@@ -1,7 +1,9 @@
 ﻿using GestorDeContactos.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -17,7 +19,27 @@ namespace GestorDeContactos.Data.Repository
         }
         public List<Contacto> ObtenerTodos()
         {
-            return _dbContext.Contactos.ToList();
+            
+                return _dbContext.Contactos.ToList();
+            
+        }
+
+        public List<Contacto> ObtenerPorId(int id)
+        {
+            return _dbContext.Contactos.Where(x => x.IdContacto == id).ToList();
+        }
+
+        public List<Contacto> ObtenerPorNombre(string nombre)
+        {
+            string toLowerName = nombre.ToLower();
+            var verificacion = _dbContext.Contactos.Any(x => x.NombreContacto.ToLower().Contains(toLowerName));
+
+            if (verificacion)
+            {
+                var resultado = _dbContext.Contactos.Where(x => x.NombreContacto.ToLower().Contains(toLowerName)).ToList();
+                return resultado;
+            }
+            else return new List<Contacto>();
         }
 
         public void Agregar(string nombre, string? apellido, int? numero, int? numeroFijo, string tipoContacto)

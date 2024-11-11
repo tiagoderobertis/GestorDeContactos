@@ -24,9 +24,9 @@ namespace GestorDeContactos.Data.Models
         public string? ApellidoContacto { get; set; } = string.Empty;
         //optional
         [StringLength(20)]
-        public int? NumeroTelefonoContacto { get; set; }
+        public long? NumeroTelefonoContacto { get; set; }
         //optional
-        public int? NumeroFijoContacto { get; set;}
+        public long? NumeroFijoContacto { get; set;}
         [Required]
         [StringLength(20)]
         public string TipoContacto { get;set; } = string.Empty;
