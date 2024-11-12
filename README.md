@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-FINISHED-green">
+</p>
 <h1 align = "center">Gestor de Contactos</h1>
 
 ![image](https://github.com/user-attachments/assets/f888712c-ab5e-444f-b2e9-844dd68df059)
